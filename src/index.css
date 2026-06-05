@@ -1,0 +1,14 @@
+/*
+ * Tailwind v4, imported WITHOUT preflight so its base reset does not clobber
+ * Spectrum 2's styles. We only use Tailwind utilities for layout/spacing on
+ * plain elements; all visible controls come from Spectrum 2 components.
+ */
+@import "tailwindcss/theme.css" layer(theme);
+@import "tailwindcss/utilities.css" layer(utilities);
+
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+}
