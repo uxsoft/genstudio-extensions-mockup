@@ -1,7 +1,6 @@
 import type { CSSProperties } from 'react';
 import { Button, Text } from '@react-spectrum/s2';
 import { style } from '@react-spectrum/s2/style' with { type: 'macro' };
-import MagicWand from '@react-spectrum/s2/icons/MagicWand';
 import BadgeVerified from '@react-spectrum/s2/icons/BadgeVerified';
 import Flag from '@react-spectrum/s2/icons/Flag';
 import { MSD_GREEN } from '../../host/brand.ts';
@@ -67,12 +66,11 @@ export function IdleView({ onRun }: IdleViewProps) {
       </span>
       <Text styles={title}>Review this content for compliance</Text>
       <Text styles={intro}>
-        The assistant checks brand and medical-legal requirements, then suggests
-        the right MLR review tier.
+        The assistant reviews this content against brand and medical-legal
+        requirements before it goes to review.
       </Text>
 
       <Button variant="accent" size="L" onPress={onRun}>
-        <MagicWand />
         Run compliance check
       </Button>
 

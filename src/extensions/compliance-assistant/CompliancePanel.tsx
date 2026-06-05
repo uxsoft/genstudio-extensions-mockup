@@ -3,12 +3,10 @@ import { SegmentedControl, SegmentedControlItem, Divider, Text } from '@react-sp
 import { style } from '@react-spectrum/s2/style' with { type: 'macro' };
 import BadgeVerified from '@react-spectrum/s2/icons/BadgeVerified';
 import Flag from '@react-spectrum/s2/icons/Flag';
-import { asset, checks } from './data.ts';
-import { AssetCard } from './AssetCard.tsx';
+import { checks } from './data.ts';
 import { IdleView } from './IdleView.tsx';
 import { ScanningView } from './ScanningView.tsx';
 import { SummaryHeader } from './SummaryHeader.tsx';
-import { ReviewTierCard } from './ReviewTierCard.tsx';
 import { GroupSection } from './GroupSection.tsx';
 
 type Phase = 'idle' | 'scanning' | 'done';
@@ -94,7 +92,6 @@ export function CompliancePanel() {
   if (phase === 'idle') {
     return (
       <div className={body}>
-        <AssetCard asset={asset} />
         <IdleView onRun={run} />
       </div>
     );
@@ -103,7 +100,6 @@ export function CompliancePanel() {
   if (phase === 'scanning') {
     return (
       <div className={body}>
-        <AssetCard asset={asset} />
         <ScanningView activeStep={activeStep} />
       </div>
     );
@@ -115,9 +111,7 @@ export function CompliancePanel() {
 
   return (
     <div className={body}>
-      <AssetCard asset={asset} />
       <SummaryHeader counts={counts} onRerun={run} />
-      <ReviewTierCard />
       <Divider size="S" />
 
       <div className={filterRow}>
