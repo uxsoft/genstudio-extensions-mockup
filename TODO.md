@@ -1,4 +1,8 @@
-the Compliance Assistant should check for 
-Brand compliance - Spelling, Grammar, Font Sizes, Font Style, SOP's / resources, Rephrasing
-
-Medical Legal compliance - presence of all required safety information, checks that this safety information is up to date and correct. That the label is present and correct for this specific medicine. That images align with the brand rules. Whether the claims are similar, exact or unrecognized. That the logo follows style guidelines for that specific brand. Suggest the appropriate review tier for the medical legal review for this piece of content.
+The process assistant should work as follows. There are multiple steps with substeps in the lifecycle of the content piece, which should be observable and actionable from this panel. These steps are strictly sequential, user can't skip steps, and the previous step always has to be completed before the user can proceed to the next step.
+First step, is a compliance step. It displays status of the compliance assistant. it should show if the compliance assistant has been run. display a check and let the user to the next step if there are no more high finding.
+The second step is the medical legal process. 
+Substep - upload to workfront. A button to trigger the upload, if the upload was successful, check the substep and display a link to the item in workfront. 
+substep - A button to create a viewable rendition PDF. A button to trigger the creation. When created a link to the rendition so the user can review the pdf.
+substep - A button to create a new material in promomats and attach the viewable rendition to it. Show a link to the material when the doc is created. 
+substep - waiting for the approved for distribution status. Poll promomats for the document status. If the material reaches the approved for distrubution status, only then can the user proceed to the next step. 
+Final step Send to activation channels. A button for each channel. Here the user can send to multiple channels and the order doesn't matter. The channels to consider for now are SFMC (Salesforce Marketing Cloud) and WordPress. If the user presses the button, display a checkmark on the button that it's already been uploaded to the activation channel and show a link to the content in that channel.

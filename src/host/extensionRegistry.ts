@@ -20,7 +20,7 @@ export const extensions: ExtensionDef[] = [
   {
     id: 'process-assistant',
     label: 'Process Assistant',
-    description: 'Placeholder add-on — content to be defined.',
+    description: 'Take this content through compliance, MLR and activation.',
     Icon: ProcessIcon,
     Panel: ProcessPanel,
   },
